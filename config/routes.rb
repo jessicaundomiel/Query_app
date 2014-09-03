@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'students/choose_color' => 'students#choose_color'
+
+  get 'students/set_color' => 'students#set_color'
+
+  post 'students/set_color' => 'students#set_color'
+
   get 'students/show_querystring'
 
   get 'students/find_by_form' => 'students#find_by_form'

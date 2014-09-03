@@ -1,6 +1,14 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :edit, :update, :destroy]
 
+  def choose_color
+   @color_array = set_color_array
+  end
+
+  def set_color
+    @color = params[:color]
+  end
+
   def show_querystring
     @name = params[:name]
     @email = params[:email]
@@ -39,8 +47,6 @@ class StudentsController < ApplicationController
       @student = Student.find(params[:input])
     end
   end
-
-
 
 
   # GET /students

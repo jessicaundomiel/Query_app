@@ -1,0 +1,37 @@
+<h2>Choose a Color:</h2>
+
+<div>
+
+	<%= form_tag("/students/set_color", method: "post") do %>
+
+		<%= label_tag(:color, "Color: " ) %>
+
+		<br />
+
+		<% @color_array.each do |c| %>
+
+		<%= radio_button_tag(:color, c) %> <%= c %><br />
+
+		<% end %>
+
+		<%= submit_tag("Color It!") %>
+
+	<% end %>
+
+</div>
+
+<h2>Or write in a different color choice:</h2>
+<div>
+
+	<%= form_tag("/students/set_color", method: "post") do  %> 
+		<!-- can also do this with the get method !-->
+		 
+		<%= label_tag(:color, "Color: " ) %>
+
+		<%= text_field_tag(:color) %>
+
+		<%= submit_tag("Color It!") %>
+
+	<% end %>
+
+</div>
