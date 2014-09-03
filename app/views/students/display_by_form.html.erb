@@ -1,0 +1,14 @@
+<% if @exists == false %>
+
+	<p> That student does not exist.</p>
+
+<% else %>
+
+	<p>
+		The student you requested is: <br/>
+		<%= @student.name %><br />
+		<%= @student.email %><br />
+	</p>
+<% end %>
+
+<p><a href="/students/find_by_form">Find By Form Again</a>

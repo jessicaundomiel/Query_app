@@ -1,0 +1,10 @@
+<!-- <h1><%= @string %></h1> !-->
+
+The id is <%= @id %>.
+<br />
+<% if @exists == true %>
+	<p> The student's name is <%= @student.name %>.</p>
+<% else %>
+	<p> That student ID does not exist.</p>
+<% end %>
+
